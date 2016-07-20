@@ -3,6 +3,7 @@ using System.Collections;
 
 public class enemy : MonoBehaviour {
     public float speed = 5f;
+    public int power = 1;
 	// Use this for initialization
 	void Start () 
     {

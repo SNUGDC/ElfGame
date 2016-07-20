@@ -3,6 +3,8 @@ using System.Collections;
 
 public class NPC : MonoBehaviour {
     public float speed = 5f;
+    public int heal = 1;
+
 	// Use this for initialization
 	void Start () 
     {
