@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        transform.Translate(-speed * Time.deltaTime, 0, 0);
+        
 	}
     void OnTriggerEnter2D(Collider2D col)
     {
