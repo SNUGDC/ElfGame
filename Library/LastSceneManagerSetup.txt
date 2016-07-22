@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/elf_1.3.unity
+- path: Assets/elf_JMK_test.unity
   isLoaded: 1
   isActive: 1
