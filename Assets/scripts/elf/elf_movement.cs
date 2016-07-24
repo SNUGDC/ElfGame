@@ -12,7 +12,6 @@ public class elf_movement : MonoBehaviour
     {
         jump_gauge = 2;
         jumping = new Vector2(0, jump_force * Time.deltaTime);
-        
 	}
 	
 	// Update is called once per frame
@@ -25,6 +24,7 @@ public class elf_movement : MonoBehaviour
             print("Jump");
             jump_gauge -= 1;
         }
+        
         
 	}
 
