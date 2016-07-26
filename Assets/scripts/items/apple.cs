@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class quest_items : MonoBehaviour {
-    public float speed = 5f;
-    private GameUI gameUI;
+public class apple : MonoBehaviour 
+{
+
+	// Use this for initialization
 	void Start () 
     {
-        gameUI = GameObject.Find("GameUI").GetComponent<GameUI>();
+	
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        
+	
 	}
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == ("Player"))
+        if (col.gameObject.tag == "Player")
         {
+            col.GetComponent<elf_inventory>().apple += 1;
             Destroy(gameObject);
         }
     }
