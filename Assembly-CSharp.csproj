@@ -58,7 +58,6 @@
      <Compile Include="Assets\scripts\enemy.cs" />
      <Compile Include="Assets\scripts\items\apple.cs" />
      <Compile Include="Assets\scripts\items\monster.cs" />
-     <Compile Include="Assets\scripts\items\quest_items.cs" />
      <Compile Include="Assets\scripts\items\weed.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -5,11 +5,15 @@ public class background : MonoBehaviour {
     public float speed = 5f;
     public string mode;
     public bool is_noon;
+    Vector2 up;
+    Vector2 down;
 	// Use this for initialization
 	void Start () 
     {
         mode = "noon";
         is_noon = true;
+        up = new Vector2(0, 0);
+        down = new Vector2(0, 15);
 	}
 	
 	// Update is called once per frame
@@ -17,12 +21,12 @@ public class background : MonoBehaviour {
     {
         if(Input.GetButtonDown("Vertical")&&Input.GetAxis("Vertical")>0&&is_noon)
         {
-            transform.position = new Vector2(0,0);
+            transform.position = up;
             is_noon = false;
         }
         if(Input.GetButtonDown("Vertical")&&Input.GetAxis("Vertical")<0&&!is_noon)
         {
-            transform.position = new Vector2(0, 15);
+            transform.position = down;
             is_noon = true;
         }
 	}
