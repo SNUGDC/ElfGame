@@ -2,13 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class GameUI : MonoBehaviour {
+public class ScoreUI : MonoBehaviour {
 
     public Text print_score;
     private int total_score = 0;
 	// Use this for initialization
 	void Start () 
     {
+        total_score = PlayerPrefs.GetInt("Tot_SCORE", 0);
         display_Score(0);
 	}
 	
@@ -21,6 +22,8 @@ public class GameUI : MonoBehaviour {
     public void display_Score(int score)
     {
         total_score += score;
-        print_score.text = "score" + total_score.ToString();
+        print_score.text = "score <color=#ff0000>" + total_score.ToString()+"</color>";
+
+        PlayerPrefs.SetInt("Tot_SCORE", total_score);
     }
 }

@@ -3,11 +3,12 @@ using System.Collections;
 
 public class NPC_apple : MonoBehaviour 
 {
-
-	// Use this for initialization
+    private QuestUI gameUI;
+    public bool apple_quest;
+	
 	void Start () 
     {
-	
+        apple_quest = false;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +21,7 @@ public class NPC_apple : MonoBehaviour
     {
         if (col.GetComponent<Collider2D>().tag == "Player")
         {
-
+            apple_quest = true;
         }
     }
 }

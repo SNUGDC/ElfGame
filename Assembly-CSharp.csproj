@@ -45,12 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\GameUI.cs" />
      <Compile Include="Assets\scripts\Main_camera.cs" />
      <Compile Include="Assets\scripts\NPC.cs" />
      <Compile Include="Assets\scripts\NPCs\NPC_apple.cs" />
      <Compile Include="Assets\scripts\NPCs\NPC_monster.cs" />
      <Compile Include="Assets\scripts\NPCs\NPC_weed.cs" />
+     <Compile Include="Assets\scripts\QuestUI.cs" />
+     <Compile Include="Assets\scripts\ScoreUI.cs" />
      <Compile Include="Assets\scripts\background.cs" />
      <Compile Include="Assets\scripts\elf\elf_gauge.cs" />
      <Compile Include="Assets\scripts\elf\elf_inventory.cs" />
