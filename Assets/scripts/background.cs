@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class background : MonoBehaviour {
-    public float speed = 5f;
     public string mode;
     public bool is_noon;
     Vector2 up;

@@ -14,16 +14,19 @@ public class elf_movement : MonoBehaviour
         jumping = new Vector2(0, jump_force * Time.deltaTime);
 	}
 	
-	// Update is called once per frame
-	void Update () 
+    void FixedUpdate()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
-	    if (jump_gauge !=0 && Input.GetButtonDown("Jump"))
+        if (jump_gauge != 0 && Input.GetButtonDown("Jump"))
         {
             GetComponent<Rigidbody2D>().velocity = jumping;
             print("Jump");
             jump_gauge -= 1;
         }
+    }
+	void Update () 
+    {
+        
         
         
 	}

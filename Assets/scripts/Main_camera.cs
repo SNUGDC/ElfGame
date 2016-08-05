@@ -6,7 +6,7 @@ public class Main_camera : MonoBehaviour
     public GameObject player;
 
     private Vector3 offset;
-    Vector3 correction = new Vector3(2, 0, 0);
+    Vector3 correction = new Vector3(2, 3, 0);
 
     void Start()
     {

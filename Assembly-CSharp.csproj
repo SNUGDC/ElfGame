@@ -60,6 +60,7 @@
      <Compile Include="Assets\scripts\items\apple.cs" />
      <Compile Include="Assets\scripts\items\monster.cs" />
      <Compile Include="Assets\scripts\items\weed.cs" />
+     <Compile Include="Assets\scripts\up_floor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
