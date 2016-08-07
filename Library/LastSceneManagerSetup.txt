@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/elf_test_MK.unity
-  isLoaded: 1
-  isActive: 1
