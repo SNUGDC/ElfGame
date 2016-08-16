@@ -3,6 +3,8 @@ using System.Collections;
 
 public class monster : MonoBehaviour 
 {
+    public float pointPerMon = 5;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -19,7 +21,7 @@ public class monster : MonoBehaviour
     {
         if (col.gameObject.tag == "Player" && col.GetComponent<elf_inventory>().can_accept_monster)
         {
-
+            PlayerPrefs.SetFloat("score", PlayerPrefs.GetFloat("score") + pointPerMon);
             Destroy(gameObject);
             col.GetComponent<elf_inventory>().monster += 1;
         }

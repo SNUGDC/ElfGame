@@ -4,26 +4,31 @@ using System.Collections;
 
 public class ScoreUI : MonoBehaviour {
 
-    public Text print_score;
-    private int total_score = 0;
-	// Use this for initialization
+    public Text scoreText;
+    public float pointPerSec = 5f;
+
+    private float totalScore; 
+
 	void Start () 
     {
-        total_score = PlayerPrefs.GetInt("Tot_SCORE", 0);
-        display_Score(0);
+        PlayerPrefs.SetFloat("score", 0);
+        totalScore = PlayerPrefs.GetFloat("score");
+
+        display_Score(totalScore);
 	}
 	
-	// Update is called once per frame
-	void Update () 
+
+	void Update ()
     {
-	
+        PlayerPrefs.SetFloat("score", totalScore);
+        display_Score(PlayerPrefs.GetFloat("score"));
 	}
 
-    public void display_Score(int score)
+    public void display_Score(float score)
     {
-        total_score += score;
-        print_score.text = "score <color=#ff0000>" + total_score.ToString()+"</color>";
-
-        PlayerPrefs.SetInt("Tot_SCORE", total_score);
+        totalScore = PlayerPrefs.GetFloat("score");
+        totalScore += Time.deltaTime * pointPerSec;
+        PlayerPrefs.SetFloat("score", totalScore);
+        scoreText.text = "score <color=#ff0000>" + ((int)totalScore).ToString()+"</color>";
     }
 }
