@@ -2,14 +2,13 @@
 using System.Collections;
 
 public class background : MonoBehaviour {
-    public string mode;
     public bool is_noon;
     Vector2 up;
     Vector2 down;
 	// Use this for initialization
 	void Start () 
     {
-        mode = "noon";
+
         is_noon = true;
         up = new Vector2(0, 0);
         down = new Vector2(0, 15);

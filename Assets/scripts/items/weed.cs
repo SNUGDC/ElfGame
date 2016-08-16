@@ -3,7 +3,6 @@ using System.Collections;
 
 public class weed : MonoBehaviour 
 {
-
 	// Use this for initialization
 	void Start () 
     {
@@ -17,7 +16,7 @@ public class weed : MonoBehaviour
 	}
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == ("Player"))
+        if (col.gameObject.tag == ("Player") && col.GetComponent<elf_inventory>().can_accept_weed)
         {
 
             Destroy(gameObject);

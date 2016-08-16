@@ -6,12 +6,17 @@ public class elf_movement : MonoBehaviour
     public float speed = 5f;
     public float jump_force = 300f;
     public int jump_gauge;
+    public bool up_floor;
+    public Vector2 velo;
     Vector2 jumping;
 	// Use this for initialization
+
+    GameObject floor = GameObject.Find("short_floor");
 	void Start () 
     {
         jump_gauge = 2;
         jumping = new Vector2(0, jump_force * Time.deltaTime);
+        
 	}
 	
     void FixedUpdate()
@@ -23,21 +28,18 @@ public class elf_movement : MonoBehaviour
             print("Jump");
             jump_gauge -= 1;
         }
+        velo = GetComponent<Rigidbody2D>().velocity;
     }
 	void Update () 
     {
-        
-        
-        
+        Physics2D.IgnoreLayerCollision(8,12, (GetComponent<Rigidbody2D>().velocity.y > 0.0f));
 	}
 
     void OnCollisionStay2D(Collision2D col)
     {
         if (col.collider.tag == "floor")
         {
-            print("floor");
             jump_gauge = 2;
-            
         }
     }
     

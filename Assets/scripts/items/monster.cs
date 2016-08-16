@@ -3,7 +3,6 @@ using System.Collections;
 
 public class monster : MonoBehaviour 
 {
-
 	// Use this for initialization
 	void Start () 
     {
@@ -18,7 +17,7 @@ public class monster : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && col.GetComponent<elf_inventory>().can_accept_monster)
         {
 
             Destroy(gameObject);

@@ -4,12 +4,10 @@ using System.Collections;
 public class NPC_monster : MonoBehaviour 
 {
     private QuestUI gameUI;
-    public bool monster_quest;
 	
 	void Start () 
     {
         gameUI = GameObject.Find("GameUI").GetComponent<QuestUI>();
-        monster_quest = false;
 	}
 	
 	// Update is called once per frame
@@ -22,7 +20,7 @@ public class NPC_monster : MonoBehaviour
     {
         if (col.GetComponent<Collider2D>().tag == "Player")
         {
-            monster_quest = true;
+            col.GetComponent<elf_inventory>().can_accept_monster = true;
         }
     }
 

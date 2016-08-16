@@ -3,7 +3,6 @@ using System.Collections;
 
 public class apple : MonoBehaviour 
 {
-
 	// Use this for initialization
 	void Start () 
     {
@@ -18,7 +17,7 @@ public class apple : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && col.GetComponent<elf_inventory>().can_accept_apple)
         {
             col.GetComponent<elf_inventory>().apple += 1;
             Destroy(gameObject);

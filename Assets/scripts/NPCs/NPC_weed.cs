@@ -4,11 +4,9 @@ using System.Collections;
 public class NPC_weed : MonoBehaviour 
 {
     private QuestUI gameUI;
-    public bool weed_quest;
 	
 	void Start () 
     {
-        weed_quest = false;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +18,7 @@ public class NPC_weed : MonoBehaviour
     {
         if (col.GetComponent<Collider2D>().tag == "Player")
         {
-            weed_quest = true;
+            col.GetComponent<elf_inventory>().can_accept_weed = true;
         }
     }
 
