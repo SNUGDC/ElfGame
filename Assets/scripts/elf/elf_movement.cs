@@ -8,6 +8,7 @@ public class elf_movement : MonoBehaviour
     public int jump_gauge;
     public bool up_floor;
     public Vector2 velo;
+    public GameObject EndPoint;
     Vector2 jumping;
 	// Use this for initialization
 
@@ -29,6 +30,14 @@ public class elf_movement : MonoBehaviour
             jump_gauge -= 1;
         }
         velo = GetComponent<Rigidbody2D>().velocity;
+
+
+        if(transform.position.x >= EndPoint.transform.position.x)
+        {
+            Vector3 reposition = new Vector3(0, transform.position.y, -1);
+            transform.position = reposition;
+        }
+
     }
 	void Update () 
     {
@@ -42,5 +51,7 @@ public class elf_movement : MonoBehaviour
             jump_gauge = 2;
         }
     }
+
+    
     
 }

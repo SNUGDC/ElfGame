@@ -31,7 +31,6 @@ public class elf_gauge : MonoBehaviour
         {
             healthPercent = 0f;
         }
-        print(currentHealth);
         healthBarSize = new Vector3(currentHealth / 20, 0.3f, 0.1f);
         healthBarMove = new Vector3(-3f - (100 - currentHealth) / 40, 3.5f, -1f);
         healthFill.transform.localScale = healthBarSize;
