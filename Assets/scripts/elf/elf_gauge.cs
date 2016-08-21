@@ -41,11 +41,7 @@ public class elf_gauge : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.GetComponent<Collider2D>().tag == "NPC")
-        {
-            healing = col.gameObject.GetComponent<NPC>().heal;
-            currentHealth += (float)healing;
-        }
+       
         if (col.GetComponent<Collider2D>().tag == "quest_item")
         {
 
