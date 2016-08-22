@@ -17,15 +17,15 @@ public class background : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if(Input.GetButtonDown("Vertical")&&Input.GetAxis("Vertical")>0&&is_noon)
+        if(Input.GetButtonDown("Vertical")&&Input.GetAxis("Vertical")>0&&!is_noon)
         {
             transform.position = up;
-            is_noon = false;
+            is_noon = true;
         }
-        if(Input.GetButtonDown("Vertical")&&Input.GetAxis("Vertical")<0&&!is_noon)
+        if(Input.GetButtonDown("Vertical")&&Input.GetAxis("Vertical")<0&&is_noon)
         {
             transform.position = down;
-            is_noon = true;
+            is_noon = false;
         }
 	}
 }
